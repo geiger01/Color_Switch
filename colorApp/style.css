@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: rgb(51, 51, 51);
+}
+
+button {
+  font-family: sans-serif;
+}
+
+path,
+i,
+svg {
+  pointer-events: none;
+}
+
+.colors {
+  min-height: 80vh;
+  display: flex;
+  color: rgb(212, 212, 212);
+}
+
+.color {
+  height: 80vh;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  overflow: hidden;
+}
+
+.color h2 {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 20vh;
+}
+
+.panel button {
+  font-size: 1.2rem;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  background: rgb(31, 33, 63);
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.panel p {
+  font-size: 1.2rem;
+}
+
+.generate-panel {
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+}
+
+.lock {
+  font-size: 2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 2rem 0;
+}
+
+.copy-container {
+  position: fixed;
+  top: 0;
+  left: 0%;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.copy-popup {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 2rem;
+  transition: transform 0.5s ease;
+  transform: translateY(-2rem);
+  min-width: 30%;
+  min-height: 30vh;
+}
+
+.copy-popup h4 {
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+.copy-container.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.copy-popup.active {
+  transform: translateY(0);
+}
+@media only screen and (max-width: 700px) {
+  .color h2 {
+    font-size: 1rem;
+  }
+}
