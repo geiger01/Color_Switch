@@ -1,4 +1,6 @@
 # Color_Switch
+Live website: https://competent-bhabha-6c7040.netlify.app/
+
 Switch random colors, Lock and copy them.
 
 An app built with css, html and javascript which you can switch random colors by pressing the "Generate" button,
